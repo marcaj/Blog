@@ -1,0 +1,33 @@
+﻿@model Blog.Models.Post
+@{
+    ViewBag.Title = "Post Create";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Edit post: @Model.Title</h1>
+    </div>
+</div>
+<form class="col-md-12" action="/Post/ActionUpdate" role="form" method="post">
+    <div class="row">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input name="title" type="text" class="form-control" id="title" placeholder="Post title" value="@Model.Title">
+        </div>
+        <div class="form-group">
+            <label for="content">Content</label>
+            <textarea name="content" class="form-control" rows="3" id="content">@Model.Content</textarea>
+        </div>
+        <div class="form-group">
+            <label for="tags">Tags</label>
+            <input name="tags" type="text" class="form-control" id="tags" placeholder="Post tags" value="@Model.TagsString">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <input name="id" type="hidden" value="@Model.Id">
+            <button type="submit" class="btn btn-success">Update</button>
+            <a type="button" class="btn btn-default" href="/Post/Details/@Model.Id">Cancel</a>
+        </div>
+    </div>
+</form>

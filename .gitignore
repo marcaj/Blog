@@ -3,3 +3,10 @@
 ################################################################################
 
 /.vs/Blog/v14/.suo
+/Blog/bin
+/Blog/obj
+/Blog/Properties/PublishProfiles/asd.pubxml.user
+/Blog/Blog.csproj.user
+/Blog.Tests/bin/Debug
+/Blog.Tests/obj
+/Blog.v12.suo

@@ -1,0 +1,35 @@
+﻿@model Blog.Models.Post
+@{
+    ViewBag.Title = "Post Detail";
+}
+
+<div class="page-header">
+    <h1>@Model.Title</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <span class="date">@Model.PublishDateString</span>
+        <p>@Model.Content</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <ul>
+        @foreach (var tag in Model.Tags)
+        {
+            <li class="label label-primary">@tag.Name</li>
+        }
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <a type="button" class="btn btn-default" href="/Post/List">Back</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <a type="button" class="btn btn-success" href="/Post/Update/@Model.Id">Edit</a>
+    </div>
+</div>

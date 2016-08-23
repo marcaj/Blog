@@ -1,0 +1,28 @@
+﻿@using Blog.Models
+@model IEnumerable<Blog.Models.Post>
+@{
+    ViewBag.Title = "Post List";
+    int count = 5;
+}
+
+<div class="page-header">
+    <h1>Post list</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-8" id="postList">
+        @foreach (Post post in Model)
+        {
+            @Html.Partial("_PostSimple", post)
+            if (count-- <= 0)
+            {
+                break;
+            }
+        }
+        <div class="ajax-auto-load"></div>
+    </div>
+    <div class="col-md-4">
+        Prawa kolumna
+    </div>
+</div>
+@Html.Partial("_PostTemplate")

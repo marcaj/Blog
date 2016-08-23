@@ -1,0 +1,16 @@
+﻿@model Blog.Models.Post
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <a href="/Post/Details/@Model.Id">
+                @Model.Title
+            </a>
+            <span class="pull-right">@Model.PublishDateString</span>
+        </h3>
+    </div>
+    <div class="panel-body">
+        <p>@Model.Content</p>
+        <a href="/Post/Details/@Model.Id">read more...</a>
+    </div>
+</div>

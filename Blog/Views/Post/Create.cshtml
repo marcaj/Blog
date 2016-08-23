@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Post Create";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Add new post</h1>
+    </div>
+</div>
+<form class="col-md-12" action="/Post/ActionCreate" role="form" method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input name="title" type="text" class="form-control" id="title" placeholder="Post title">
+        </div>
+        <div class="form-group">
+            <label for="content">Content</label>
+            <textarea name="content" class="form-control" rows="3" id="content"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="tags">Tags</label>
+            <input name="tags" type="text" class="form-control" id="tags" placeholder="Post tags">
+        </div>
+        <div class="form-group">
+            <label for="featureImage">Feature image</label>
+            <input name="featureImage" type="file" id="featureImage" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-success">Add</button>
+            <a type="button" class="btn btn-default" href="/Post/List">Cancel</a>
+        </div>
+    </div>
+</form>
